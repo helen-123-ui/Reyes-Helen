@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CASO Nº06 - Fuente personalizada</title>
+  <style>
+    /* CASO 6: Aplicar una fuente usando @font-face */
+    @font-face {
+      font-family: 'LatoCustom';
+      src: url('https://fonts.gstatic.com/s/lato/v24/S6uyw4BMUTPHjx4wWA.woff2') format('woff2');
+      font-style: normal;
+      font-weight: 400;
+    }
+
+    body {
+      font-family: 'LatoCustom', sans-serif;
+      background-color: #fff;
+      margin: 40px;
+      color: #333;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <h1>CASO Nº06: Aplicación de fuente con @font-face</h1>
+  <p>
+    Este documento utiliza la fuente <strong>Lato</strong> cargada mediante <code>@font-face</code>.
+    La fuente se aplica a todo el texto del sitio web para asegurar un estilo visual uniforme y profesional.
+  </p>
+</body>
+</html>

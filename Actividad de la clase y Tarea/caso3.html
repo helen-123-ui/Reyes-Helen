@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Horizontal con NAV</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        min-height: 100vh;
+        box-sizing: border-box;
+      }
+      nav {
+        background-color: #4fd3ed; /* celeste claro para el fondo exterior */
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        overflow: hidden;
+        display: flex;
+        margin-bottom: 15px;
+        border: 4px solid #4fd3ed;
+      }
+      nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+      }
+      nav a,
+      nav a:visited,
+      nav a:focus {
+        display: block;
+        padding: 15px 25px;
+        background-color: #009fc3; /* azul más intenso para los cuadros */
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: bold;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+        border-right: 4px solid #4fd3ed;
+        border-left: 4px solid #4fd3ed;
+        box-sizing: border-box;
+      }
+      nav li:first-child a {
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        border-left: none;
+      }
+      nav li:last-child a {
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        border-right: none;
+      }
+      nav a:hover {
+        background-color: #007fa3;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+      }
+      nav a:active {
+        background-color: #005f73;
+        transform: translateY(1px);
+      }
+      .figure-caption {
+        font-style: italic;
+        color: #555;
+        font-size: 14px;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#">INICIO</a></li>
+        <li><a href="#">NOSOTROS</a></li>
+        <li><a href="#">SERVICIOS</a></li>
+        <li><a href="#">RECURSOS</a></li>
+        <li><a href="#">CONTÁCTENOS</a></li>
+      </ul>
+    </nav>
+    <p class="figure-caption">Fig. 2.14 Barra de navegación web</p>
+  </body>
+</html>

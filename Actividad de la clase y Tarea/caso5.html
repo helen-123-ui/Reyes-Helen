@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CASO Nº5</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      padding: 20px;
+      background-color: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+    .contenedor {
+      width: 240px;
+      height: 300px;
+      margin: 18px;
+      padding: 8px;
+      border: 3px solid blue;
+      box-sizing: border-box;
+      overflow: hidden;
+      background-color: #f0f0f0;
+    }
+
+    /* div1: puntos (...) al final, línea 5% más alta, sombra roja derecha-abajo */
+    #div1 p {
+      line-height: 1.05;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    #div1 span {
+      font-size: 18px;
+      text-shadow: 2px 2px 2px red;
+    }
+
+    /* div2: texto cortado sin puntos, línea 10% más alta, sombra azul izquierda-abajo */
+    #div2 p {
+      line-height: 1.10;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: clip;
+    }
+
+    #div2 span {
+      font-size: 18px;
+      text-shadow: -2px 2px 2px blue;
+    }
+
+    /* div3: justificado, línea 20% más alta, color #8B4513, sombra verde difuminada */
+    #div3 p {
+      line-height: 1.20;
+      text-align: justify;
+      color: #8B4513;
+    }
+
+    #div3 span {
+      font-size: 18px;
+      text-shadow: 0 0 10px green;
+    }
+  </style>
+</head>
+<body>
+  <!-- div1 -->
+  <div id="div1" class="contenedor">
+    <p>
+      Este es un texto muy largo que está diseñado para exceder el tamaño del contenedor y ser cortado automáticamente con puntos suspensivos. <span>Este fragmento tiene sombra roja.</span> El texto sigue para completar el ejemplo.
+    </p>
+  </div>
+
+  <!-- div2 -->
+  <div id="div2" class="contenedor">
+    <p>
+      Este segundo contenedor también tiene un texto extenso que rebasa su ancho, pero no se mostrarán puntos. <span>Este fragmento tiene sombra azul.</span> El resto se corta sin indicar el final.
+    </p>
+  </div>
+
+  <!-- div3 -->
+  <div id="div3" class="contenedor">
+    <p>
+      <span>Este fragmento tiene un efecto de vapor verde</span>. El texto está justificado y tiene un color marrón, diseñado para verse claro y bien alineado dentro del div. Se continúa escribiendo para que sobrepase el área visible del bloque y muestre el comportamiento esperado.
+    </p>
+  </div>
+</body>
+</html>
